@@ -28,11 +28,14 @@ from sklearn.linear_model import LinearRegression
 lin_reg = LinearRegression()
 lin_reg.fit(X, y)
 
-# Fitting Polynomial Regression to the dataset
+# Fitting Polynomial Regression to the dataset, adds a new matrix x_poly with X^2 ,X^3 , X^4 as the degree specified is 4.
 from sklearn.preprocessing import PolynomialFeatures
 poly_reg = PolynomialFeatures(degree = 4)
 X_poly = poly_reg.fit_transform(X)
-poly_reg.fit(X_poly, y)
+#finds the best fit coeeficients for polynomial regression .
+hadpoly_reg.fit(X_poly, y)
+#We are creating extra independent variables with polynomial with X 
+#and then its as good as applying multile linear regression to X_Poly
 lin_reg_2 = LinearRegression()
 lin_reg_2.fit(X_poly, y)
 
