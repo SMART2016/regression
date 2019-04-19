@@ -33,8 +33,8 @@ from sklearn.preprocessing import PolynomialFeatures
 poly_reg = PolynomialFeatures(degree = 4)
 X_poly = poly_reg.fit_transform(X)
 #finds the best fit coeeficients for polynomial regression .
-hadpoly_reg.fit(X_poly, y)
-#We are creating extra independent variables with polynomial with X 
+poly_reg.fit(X_poly, y)
+#We are creating extra independent variables with polynomial of X 
 #and then its as good as applying multile linear regression to X_Poly
 lin_reg_2 = LinearRegression()
 lin_reg_2.fit(X_poly, y)

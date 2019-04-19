@@ -22,7 +22,7 @@ regression_line = [(b1*X)+b0 for x in X]
 
 #5) R-squared for the regression line if its closer to 1 that means error is low and line is a good fit
 r_squared = coeeficient_of_determination(y,regression_line[0])
-print(r_squared)
+print("R-Squared is: ",r_squared)
 
 #6) predicted new Y
 y1 = predict(9,b1,b0)
